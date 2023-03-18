@@ -1,63 +1,70 @@
-Kopia zapasowa WordPress 
-Kopia zapasowa bez wykorzystania wtyczek
-Co będziemy potrzebować? 
-Dostęp do FTP
-Dostęp do bazy danych
-Notatnik
-Mysqldump.exe
-WinSCP
-Tworzymy plik backup.cmd
+# Kopia zapasowa WordPress 
+## Kopia zapasowa bez wykorzystania wtyczek
+### Co będziemy potrzebować? 
+- Dostęp do FTP
+- Dostęp do bazy danych
+- Notatnik
+- Mysqldump.exe
+- WinSCP
+
+## Tworzymy plik backup.cmd
 Najlepiej sobie utworzyć katalog backup np. na dysku C. Ścieżka do naszego pliku będzie wyglądać następująco. ’C:\backup\backup.cmd’ tak przygotowany plik wystarczy teraz edytować w notatnik.
 
-Tworzymy katalogi WWW oraz SQL
+## Tworzymy katalogi WWW oraz SQL
 Tworzymy dwa katalogi dla naszej kopi bezpieczeństwa. Katalog WWW, będą tam pliki naszego WordPress oraz katalog SQL w którym będziemy przetrzymywać naszą Bazę Danych.
 
 Dodatkowo jeżeli mamy kilka stron, dobrą praktyką jest stworzenie dodatkowych katalogów z nazwą stron. Najlepiej katalog nazwać tak samo jak adres naszej strony.
 
-@mkdir C:\backup\tusonic_backup\tusonicdownload\www
-@mkdir C:\backup\tusonic_backup\tusonicdownload\sql
+`@mkdir C:\backup\tusonic_backup\tusonicdownload\www`
+`@mkdir C:\backup\tusonic_backup\tusonicdownload\sql`
 
 Tworzenie kopii zapasowej bazy danych
 Stworzenie kopi zapasowej bazy danych to nic innego jak podanie loginu, hasła oraz adresu serwera, na którym stoi nasza baza.
 
 Na co zwrócić uwagę?
 
--h = host – adres serwera
+*-h = host – adres serwera
 -u = user – login do bazy
--p = password – hasło do bazy
+-p = password – hasło do bazy*
+
 Cały wpis powinien wyglądać tak:
 
-@C:\backup\mysql\bin\mysqldump.exe -h nasz.serwer.pl –column-statistics=0 -u login -phasło nazwa_bazy > C:\backup\tusonic_backup\tusonicdownload\sql\database_sql.sql
+`@C:\backup\mysql\bin\mysqldump.exe -h nasz.serwer.pl –column-statistics=0 -u login -phasło nazwa_bazy > C:\backup\tusonic_backup\tusonicdownload\sql\database_sql.sql`
 
-Tworzenie kopii zapasowej plików WordPress
+## Tworzenie kopii zapasowej plików WordPress
 Kopiowanie plików odbywa się przy pomocy protokołu FTP. Aby WinSCP połączył się z serwerem konieczne jest stworzenie pliku tekstowego z konfiguracją.
 
 Tworzymy plik backup.txt – będzie wyglądać to następująco:
 
+```bash
 echo on
-open ftp://login:hasło@nasz.serwer.pl
+open ftp://login:hasło[at]nasz.serwer.pl
 get ścieżka/na/serwerze C:\backup\tusonic_backup\tusonicdownload\www
 exit
+```
 
 Teraz wystarczy, że w naszym skrypcie dopiszemy:
 
-@”C:\Program Files (x86)\WinSCP\WinSCP.com” /int=nul /script=backup.txt
+`@”C:\Program Files (x86)\WinSCP\WinSCP.com” /int=nul /script=backup.txt`
 
 Zmiana katalogów i zakończenie procedury wykonania kopi zapasowej
 Dobrą praktyka jest, aby na końcu nasz katalog miał nazwę w postaci daty i godziny. Dzięki takiemu zapisowi unikniemy pomyłek z przywracaniem odpowiedniej kopii zapasowej. Warto trzymać kilka kopii zapasowych jeżeli często coś zmieniamy na stronie.
 
 Aby zautomatyzować nazewnictwo katalogu, warto na koniec skryptu dodać taki wpis. Pozwoli on pobrać aktualna dane i zmienić nazwę katalogu tak, aby miał on format daty i godziny.
 
+```bash
 @set name1=%date:~-4,4%-%date:~-10,2%-%date:~7,2%g%TIME:~0,2%
 @cd C:\backup\tusonic_backup\
 @rename „tusonicdownload” „%name1%”
+```
 
-Skrypt backup.cmd
+## Skrypt backup.cmd
 Oczywiście nic nie stoi na przeszkodzie, aby w skrypcie zaimplementować własne rozwiązania. W ten sam sposób możemy również zbudować skrypt, który wykona nam kopie zapasową klika stron WordPress. Bez wątpienia posiadanie kopii zapasowej jest jedną z ważnych, jak nie najważniejszych rzeczy.
 
 Na koniec przykładowy skrypt do robienia kopi zapasowej strony WordPress bez konieczności instalowania wtyczek.
 
-backup.cmd
+**backup.cmd**
+```bash
 @set name1=%date:~-4,4%-%date:~-10,2%-%date:~7,2%g%TIME:~0,2%
 @echo # TWORZENIE KATALOGU %name1% #
 @mkdir C:\backup\tusonic_backup\tusonicdownload\www
@@ -68,9 +75,12 @@ backup.cmd
 @cd C:\backup\tusonic_backup\
 @rename „tusonicdownload” „%name1%”
 @pause
+```
 
-backup.txt
+**backup.txt**
+```bash
 echo on
 open ftp://login:hasło@nasz.serwer.pl
 get ścieżka/na/serwerze C:\backup\tusonic_backup\tusonicdownload\www
 exit
+```

@@ -1,4 +1,4 @@
-GRAFIKA I VIDEO
+## GRAFIKA I VIDEO
 https://clipchamp.com/pl/video-editor/ – edytor video
 https://snapedit.app/ – do usuwania przedmiotów ze zdjęcia
 https://www.photopea.com/ – darmowy Photoshop online
@@ -12,7 +12,7 @@ https://pixabay.com/pl/ – darmowe obrazki
 https://www.figma.com/ – projektowanie wyglądu
 
  
-PROGRAMOWANIE
+## PROGRAMOWANIE
 https://codecanyon.net/ – portal z projektami programistycznymi
 https://component.gallery/components/ – galeria komponentów webowych
 
@@ -24,15 +24,15 @@ https://carbon.now.sh/ – pochwal się swoim kodem
 https://smalldev.tools/ – kilka przydatnych toolsów 🙂
 
  
-DODATKI I CIEKAWOSTKI
+## DODATKI I CIEKAWOSTKI
 https://www.phpied.com/faster-wordpress-rendering-with-3-lines-of-configuration/ – jak przyśpieszyć WordPress
 https://instantgeo.info/ – bardzo dokładna geolokalizacja IP
 
  
-SYMULATORY
+## SYMULATORY
 https://wokwi.com/ – symulator plytek arduino
 
  
-PRZETWARZANIE DANYCH
+## PRZETWARZANIE DANYCH
 https://tally.so/ – tworzenie formularzy
 https://flourish.studio/examples/ – przedstawianie danych w postaci opowiadania
