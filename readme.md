@@ -5,6 +5,7 @@
 - [Generowanie darmowych certyfikatów SSL Lets Encrypt](https://github.com/Tusonic/Blog/blob/main/generowanie-darmowych-certyfikatow-ssl-lets-encrypt.md)
 - [WordPress i jego zalety! Dlaczego warto używać?](https://github.com/Tusonic/Blog/blob/main/wordpress-i-jego-zalety.md)
 - [Kopia zapasowa WordPress](https://github.com/Tusonic/Blog/blob/main/kopia-zapasowa-wordpress.md)
+- [Przydatne strony internetowe](https://github.com/Tusonic/Blog/blob/main/praktyczne-strony-internetowe.md)
 
 ## Strona 
 Wszystkie artykuły możesz również zobaczyć na stronie [Tusonic](https://tusonic.pl)
