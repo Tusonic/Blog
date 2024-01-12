@@ -9,3 +9,4 @@
 
 ## Strona 
 Wszystkie artykuły możesz również zobaczyć na stronie [Tusonic](https://tusonic.pl)
+Strona domowa: [kazmierczak.dev](https://kazmierczak.dev)
