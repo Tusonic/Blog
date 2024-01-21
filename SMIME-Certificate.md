@@ -1,4 +1,9 @@
 ## SMIME Certificate
+FREE SMIME
+```
+https://extrassl.actalis.it/portal/uapub/freemail?lang=en
+```
+
 ```
 openssl pkcs12 -in file.pfx -clcerts -nokeys -out file.crt
 ```
