@@ -8,7 +8,8 @@
 - [WordPress i jego zalety! Dlaczego warto używać?](https://github.com/Tusonic/Blog/blob/main/wordpress-i-jego-zalety.md)
 - [Kopia zapasowa WordPress](https://github.com/Tusonic/Blog/blob/main/kopia-zapasowa-wordpress.md)
 - [Przydatne strony internetowe](https://github.com/Tusonic/Blog/blob/main/praktyczne-strony-internetowe.md)
-- [Czy warto uczyć się PHP?](https://github.com/Tusonic/Blog/blob/main/praktyczne-strony-internetowe.md)
+- [Czy warto uczyć się PHP?](https://github.com/Tusonic/Blog/blob/main/czy-warto-uczyc-sie-php.md)
+- [Co to jest atak brute-force i jak się przed nim zabezpieczyć?] (https://github.com/Tusonic/Blog/blob/main/co-to-jest-atak-brute-force-i-jak-sie-przed-nim-zabezpieczyc.md)
 
 ## Strona 
 Wszystkie artykuły możesz również zobaczyć na stronie [Tusonic](https://tusonic.pl)
