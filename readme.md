@@ -1,5 +1,8 @@
 ![Logo](https://tusonic.pl/wp-content/uploads/LogoTusonic.png)
 
+## TOP
+- [Przydatne zasoby dla web developerow i projektantow](https://github.com/Tusonic/Blog/blob/main/przydatne-zasoby-dla-web-developerow-i-projektantow.md)
+
 ## Blog
 - [Darmowe wtyczki do wordpressa](https://github.com/Tusonic/Blog/blob/main/darmowe-wtyczki-do-wordpressa.md)
 - [Dlaczego warto kupić własną domenę?](https://github.com/Tusonic/Blog/blob/main/dlaczego-warto-kupic-wlasna-domene.md)
