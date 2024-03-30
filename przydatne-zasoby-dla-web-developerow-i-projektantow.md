@@ -2,6 +2,9 @@
 
 Zestawienie przydatnych narzędzi, serwisów i zasobów dla osób zajmujących się tworzeniem stron internetowych, aplikacji webowych oraz projektowaniem UI/UX.
 
+## Nauka
+- [edabit](https://edabit.com) - Platforma do nauki programowania
+
 ## Narzędzia i platformy do testowania i prezentacji kodu
 
 - [CodePen](https://codepen.io) - Platforma do testowania i prezentacji kodu HTML, CSS i JavaScript w przeglądarce.
