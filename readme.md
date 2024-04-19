@@ -2,6 +2,7 @@
 
 ## TOP
 - [Przydatne zasoby dla web developerow i projektantow](https://github.com/Tusonic/Blog/blob/main/przydatne-zasoby-dla-web-developerow-i-projektantow.md)
+- [Przydatne strony korzystające ze sztucznej inteligencji](https://github.com/Tusonic/Blog/blob/main/przydatne-strony-AI.md)
 
 ## Blog
 - [Darmowe wtyczki do wordpressa](https://github.com/Tusonic/Blog/blob/main/darmowe-wtyczki-do-wordpressa.md)
