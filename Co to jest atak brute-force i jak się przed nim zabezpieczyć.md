@@ -1,27 +1,26 @@
-## Co to jest atak brute-force i jak się przed nim zabezpieczyć?
 Atak siłowy (ang. brute-force) na formularz logowania to nic innego jak zgadywanie hasła. To częsty problem z jakim borykają się twórcy stron i skryptów logowania. Atak brute-force polega na tym, że atakujący próbuje odkryć hasło poprzez systematyczne sprawdzanie kolejnych możliwych ciągów znaków (liter, liczb i symboli).
 
 Każda strona, która zawiera jakiekolwiek pole do wpisania hasła lub formularz logowania może być celem takiego ataku. Jeżeli strona lub aplikacja nie posiada zabezpieczeń przed atakami brute-force, to złamanie hasła jest matematycznie pewne i moment w, którym dojdzie do włamania przy jego pomocy jest już tylko kwestią czasu.
 
 W świecie aplikacji internetowych znalezienie hasła może zając od kilku dni do kilku a nawet kilkuset lat. Czas jaki jest potrzebny do odgadnięcia hasła zależy od jego długości i czasu odpowiedzi systemu logowania. Aby skrócić ten czas i uczynić proces łamania hasła bardziej efektywnym, haker przed właściwym atakiem siłowym stosuje metodę słownikową lub hybrydową. techniki te wykorzystują fakt, że hasło zawiera naturalne słowa typu Kowalski123 a nie tylko „wymieszany” ciąg liter.
 
-### Ryzyka i koszty braku zabezpieczeń przed atakami brute-force
+Ryzyka i koszty braku zabezpieczeń przed atakami brute-force
 Możliwość włamania się na konto lub ekspozycja danych, które miały być niejawne to jedno ale z perspektywy osoby, która posiada taki formularz na stronie, uciążliwym i realnym problemem jest już sam proces ciągłego testowania haseł. Taki proces obciąża serwer przez co usługa działa wolniej, generuje sztuczny ruch i może zwiększać koszty związane z hostingiem a w skrajnych przypadkach może pogarszać SEO.
 
-### Z czym tak naprawdę mamy do czynienia?
+Z czym tak naprawdę mamy do czynienia?
 Ataki brute-force najczęściej są przeprowadzone przez automatyczne skrypty a narzędzia do przeprowadzania takich ataków są ogólnodostępne. Kiedy wykryjesz atak brute-force nie oznacza to, że jakaś konkretna osoba chce zaszkodzić Twojemu serwisowi, po prostu automatyczne skrypty, które na celownik biorą strony z jakimkolwiek ruchem skanują stronę w poszukiwaniu formularza do ataku i zaczynają działanie.
 
 Atak brute-force, choć jest bardzo łatwy do wykrycia, ciężko całkowicie wyeliminować jego próbę przeprowadzenia na naszej stronie czy aplikacji. Wspomniane narzędzia do ataków brute-force potrafią routować żądania przez serwery pośredniczące. Wówczas każde żądanie wydaje się pochodzić z innego adresu IP i nie można zablokować tych ataków banując konkretne adresy IP. Aby jeszcze bardziej skomplikować sprawę, niektóre narzędzia próbują przy każdej próbie innej nazwy użytkownika i hasła, więc nie można zablokować jednego konta w przypadku nieudanych prób podania hasła.
 
-### Jak wykryć atak brute-force?
+Jak wykryć atak brute-force?
 Atak siłowy jest bardzo łatwy do wykrycia w logach serwera:
 
-- wiele błędnych prób logowania z pojedynczego adresu IP,
-- wiele prób logowania przy użyciu wielu różnych loginów z pojedynczego adresu IP,
-- wiele prób łamania hasła konkretnego konta z wielu różnych adresów IP,
-- duże zużycie transferu przez pojedynczy host,
-- próby wejścia na adresy w formacie: http://user:password@www.example.com/login.htm
-- Metody radzenia sobie z atakami brute-force
+wiele błędnych prób logowania z pojedynczego adresu IP,
+wiele prób logowania przy użyciu wielu różnych loginów z pojedynczego adresu IP,
+wiele prób łamania hasła konkretnego konta z wielu różnych adresów IP,
+duże zużycie transferu przez pojedynczy host,
+próby wejścia na adresy w formacie: http://user:password@www.example.com/login.htm
+Metody radzenia sobie z atakami brute-force
 Przyjrzyjmy się metodom jakie często mają zapobiec lub znacznie utrudnić przeprowadzanie ataków brute-force. Każda metoda ma swoje zalety i wady.
 
 Metoda 1: Blokowanie atakowanych kont
@@ -81,4 +80,3 @@ Podsumowanie
 Jak widać jest wiele technik na odpieranie ataków brute-force. Ataki siłowe dzięki swojej prostocie działania są zaskakująco trudne do całkowitego powstrzymania. Dzięki stosowaniu najskuteczniejszych metod zaradczych lub nawet ich kombinacji można znacznie ograniczyć ryzyko złamania hasła w ten sposób.
 
 Warto upewnić się, że użytkownicy i klienci naszych witryn przestrzegają podstawowych zasad dotyczących tzw. silnych haseł. W drugiej kolejności warto banować adresy IP, które wysyłając nadmiarowe zapytania HTTP niepotrzebnie obciążają hosting aplikacji i marnują jego transfer.
-
